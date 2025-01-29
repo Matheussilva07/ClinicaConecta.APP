@@ -2,7 +2,7 @@
 using FluentValidation;
 
 namespace clinica.Application.PacientesUseCases;
-internal class PacientesValidator: AbstractValidator<RequestRegisterPacienteJson>
+public class PacientesValidator: AbstractValidator<RequestRegisterPacienteJson>
 {
     public PacientesValidator()
     {
@@ -12,7 +12,7 @@ internal class PacientesValidator: AbstractValidator<RequestRegisterPacienteJson
         RuleFor(p => p.Birth).NotEmpty().LessThan(DateTime.UtcNow).WithMessage("Informe a data de nascimento do paciente");
     }
 }
-internal class UpdatePacientesValidator : AbstractValidator<RequestUpdatePacienteJson>
+public class UpdatePacientesValidator : AbstractValidator<RequestUpdatePacienteJson>
 {
 	public UpdatePacientesValidator()
 	{

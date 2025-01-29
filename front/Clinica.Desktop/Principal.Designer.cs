@@ -33,9 +33,9 @@ partial class Principal
 		button6 = new Button();
 		button5 = new Button();
 		button4 = new Button();
-		button3 = new Button();
+		Btn_Funcionarios = new Button();
 		button2 = new Button();
-		button1 = new Button();
+		Btn_PacientesForm = new Button();
 		pictureBox1 = new PictureBox();
 		panel1.SuspendLayout();
 		((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -48,9 +48,9 @@ partial class Principal
 		panel1.Controls.Add(button6);
 		panel1.Controls.Add(button5);
 		panel1.Controls.Add(button4);
-		panel1.Controls.Add(button3);
+		panel1.Controls.Add(Btn_Funcionarios);
 		panel1.Controls.Add(button2);
-		panel1.Controls.Add(button1);
+		panel1.Controls.Add(Btn_PacientesForm);
 		panel1.Location = new Point(2, 3);
 		panel1.Name = "panel1";
 		panel1.Size = new Size(210, 590);
@@ -92,17 +92,18 @@ partial class Principal
 		button4.Text = "Consultas";
 		button4.UseVisualStyleBackColor = false;
 		// 
-		// button3
+		// Btn_Funcionarios
 		// 
-		button3.BackColor = Color.DarkSeaGreen;
-		button3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		button3.ForeColor = SystemColors.ButtonHighlight;
-		button3.Location = new Point(33, 112);
-		button3.Name = "button3";
-		button3.Size = new Size(137, 48);
-		button3.TabIndex = 2;
-		button3.Text = "Funcionários";
-		button3.UseVisualStyleBackColor = false;
+		Btn_Funcionarios.BackColor = Color.DarkSeaGreen;
+		Btn_Funcionarios.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+		Btn_Funcionarios.ForeColor = SystemColors.ButtonHighlight;
+		Btn_Funcionarios.Location = new Point(33, 112);
+		Btn_Funcionarios.Name = "Btn_Funcionarios";
+		Btn_Funcionarios.Size = new Size(137, 48);
+		Btn_Funcionarios.TabIndex = 2;
+		Btn_Funcionarios.Text = "Funcionários";
+		Btn_Funcionarios.UseVisualStyleBackColor = false;
+		Btn_Funcionarios.Click += Btn_Funcionarios_Click;
 		// 
 		// button2
 		// 
@@ -115,18 +116,20 @@ partial class Principal
 		button2.TabIndex = 1;
 		button2.Text = "Doutores";
 		button2.UseVisualStyleBackColor = false;
+		button2.Click += Btn_Doutores_Click;
 		// 
-		// button1
+		// Btn_PacientesForm
 		// 
-		button1.BackColor = Color.DarkSeaGreen;
-		button1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		button1.ForeColor = SystemColors.ButtonHighlight;
-		button1.Location = new Point(33, 42);
-		button1.Name = "button1";
-		button1.Size = new Size(137, 48);
-		button1.TabIndex = 0;
-		button1.Text = "Pacientes";
-		button1.UseVisualStyleBackColor = false;
+		Btn_PacientesForm.BackColor = Color.DarkSeaGreen;
+		Btn_PacientesForm.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+		Btn_PacientesForm.ForeColor = SystemColors.ButtonHighlight;
+		Btn_PacientesForm.Location = new Point(33, 42);
+		Btn_PacientesForm.Name = "Btn_PacientesForm";
+		Btn_PacientesForm.Size = new Size(137, 48);
+		Btn_PacientesForm.TabIndex = 0;
+		Btn_PacientesForm.Text = "Pacientes";
+		Btn_PacientesForm.UseVisualStyleBackColor = false;
+		Btn_PacientesForm.Click += Btn_PacientesForm_Click;
 		// 
 		// pictureBox1
 		// 
@@ -147,8 +150,8 @@ partial class Principal
 		Controls.Add(pictureBox1);
 		Controls.Add(panel1);
 		Name = "Principal";
+		StartPosition = FormStartPosition.CenterScreen;
 		Text = "Conecta";
-		Load += Form1_Load;
 		panel1.ResumeLayout(false);
 		((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 		ResumeLayout(false);
@@ -158,9 +161,9 @@ partial class Principal
 
 	private Panel panel1;
 	private PictureBox pictureBox1;
-	private Button button3;
+	private Button Btn_Funcionarios;
 	private Button button2;
-	private Button button1;
+	private Button Btn_PacientesForm;
 	private Button button6;
 	private Button button5;
 	private Button button4;

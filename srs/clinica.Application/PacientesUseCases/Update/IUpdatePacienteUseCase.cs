@@ -3,5 +3,5 @@
 namespace clinica.Application.PacientesUseCases.Update;
 public interface IUpdatePacienteUseCase
 {
-	Task ExecuteAsync(RequestUpdatePacienteJson request, string name);
+	Task ExecuteAsync(RequestUpdatePacienteJson request, string id);
 }

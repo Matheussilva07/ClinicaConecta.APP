@@ -2,7 +2,7 @@
 using clinica.Communication.Pacientes.Requests;
 using clinica.Communication.Pacientes.Responses;
 using clinica.Domain.Entities;
-using clinica.Domain.Repositories;
+using clinica.Domain.Repositories.Pacientes;
 
 namespace clinica.Application.PacientesUseCases.Register;
 internal class RegisterPacienteUseCase : IRegisterPacienteUseCase
@@ -16,7 +16,7 @@ internal class RegisterPacienteUseCase : IRegisterPacienteUseCase
 		_mapper = mapper;
 	}
 
-	public async Task<ResponseRegisteredPacinteJson> ExecuteAsync(RequestRegisterPacienteJson request)
+	public async Task<ResponseRegisteredPacienteJson> ExecuteAsync(RequestRegisterPacienteJson request)
 	{
 		Validate(request);
 
@@ -24,7 +24,7 @@ internal class RegisterPacienteUseCase : IRegisterPacienteUseCase
 			
 		await _repository.AddAsync(paciente);
 
-		return _mapper.Map<ResponseRegisteredPacinteJson>(paciente);
+		return _mapper.Map<ResponseRegisteredPacienteJson>(paciente);
 	}
 	private static void Validate(RequestRegisterPacienteJson request)
 	{

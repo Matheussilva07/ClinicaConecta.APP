@@ -13,13 +13,33 @@ internal class ClinicaDbContext
 		return client;
 	}
 
-	public static IMongoCollection<Paciente> GetPacientesCollection()
+	public static IMongoCollection<Paciente> GetPacientesCollectionID()
 	{
 		var client = GetMongoClient();
 
 		var db = client.GetDatabase("Clinica_Conecta_DB");
 
 		var collection = db.GetCollection<Paciente>("Pacientes");
+
+		return collection;
+	}
+	public static IMongoCollection<Funcionario> GetFuncionariosCollectionID()
+	{
+		var client = GetMongoClient();
+
+		var db = client.GetDatabase("Clinica_Conecta_DB");
+
+		var collection = db.GetCollection<Funcionario>("funcionariosGerais");
+
+		return collection;
+	}
+	public static IMongoCollection<Doctor> GetDoutoresCollectionID()
+	{
+		var client = GetMongoClient();
+
+		var db = client.GetDatabase("Clinica_Conecta_DB");
+
+		var collection = db.GetCollection<Doctor>("Doutores");
 
 		return collection;
 	}

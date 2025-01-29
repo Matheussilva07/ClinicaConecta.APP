@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using clinica.Domain.Entities;
-using clinica.Domain.Repositories;
+using clinica.Domain.Repositories.Pacientes;
 
 namespace clinica.Application.PacientesUseCases.GetAll;
 internal class GetAllPacientesUseCase : IGetAllPacientesUseCase
