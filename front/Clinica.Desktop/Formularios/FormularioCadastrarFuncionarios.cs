@@ -5,19 +5,19 @@ using Clinica.Desktop.HTTP_Funcionarios;
 namespace Clinica.Desktop.Formularios;
 public partial class FormularioCadastrarFuncionarios : Form
 {
-	private readonly string _id;
-	private readonly string _name;
-	private readonly string _email;
-	private readonly string _cpf;
-	private readonly string _rg;
-	private readonly string _address;
-	private readonly string _telephone;
-	private readonly string _function;
+	private readonly string? _id;
+	private readonly string? _name;
+	private readonly string? _email;
+	private readonly string? _cpf;
+	private readonly string? _rg;
+	private readonly string? _address;
+	private readonly string? _telephone;
+	private readonly string? _function;
 	private readonly DateTime _date_hire;
 	private readonly DateTime _date_fire;
-	private readonly ContractType _contractType;
-	private readonly int _workHours;
-	private readonly string _bankAccount;
+	private readonly ContractType? _contractType;
+	private readonly int? _workHours;
+	private readonly string? _bankAccount;
 	public FormularioCadastrarFuncionarios()
 	{
 		InitializeComponent();

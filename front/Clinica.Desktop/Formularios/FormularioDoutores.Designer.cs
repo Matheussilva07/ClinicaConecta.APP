@@ -43,6 +43,7 @@ partial class FormularioDoutores
 		dataGridView_Doctors.Name = "dataGridView_Doctors";
 		dataGridView_Doctors.Size = new Size(651, 499);
 		dataGridView_Doctors.TabIndex = 3;
+		dataGridView_Doctors.CellDoubleClick += DataGridView_Doctors_CellDoubleClick;
 		// 
 		// panel1
 		// 

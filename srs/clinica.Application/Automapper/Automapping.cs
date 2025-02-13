@@ -7,6 +7,8 @@ using clinica.Communication.FuncionariosGerais.Requests;
 using clinica.Communication.FuncionariosGerais.Responses;
 using clinica.Communication.Pacientes.Requests;
 using clinica.Communication.Pacientes.Responses;
+using clinica.Communication.Users.Requests;
+using clinica.Communication.Users.Responses;
 using clinica.Domain.Entities;
 
 namespace clinica.Application.Automapper;
@@ -20,6 +22,8 @@ public class Automapping : Profile
 		EntityToResponse_Funcionarios();
 		RequestToEntity_Doctors();
 		EntityToResponse_Doctors();
+		RequestoToEntity_Users();
+		EntityToResponse_Users();
 	}
 
 	#region Automapper para pacientes
@@ -41,13 +45,13 @@ public class Automapping : Profile
 	private void RequestToEntity_Funcionarios()
 	{
 		CreateMap<RequestRegisterFuncionarioJson, Funcionario>();
-		CreateMap<RequestUpdateFuncionarioJson, Funcionario >();
+		CreateMap<RequestUpdateFuncionarioJson, Funcionario>();
 	}
 	private void EntityToResponse_Funcionarios()
 	{
 		CreateMap<Funcionario, ResponseRegisteredFuncionarioJson>();
-		CreateMap<Funcionario, ResponseShortFuncionarioJson>();		
-		CreateMap<Funcionario, ResponseWorkerJson>();		
+		CreateMap<Funcionario, ResponseShortFuncionarioJson>();
+		CreateMap<Funcionario, ResponseWorkerJson>();
 	}
 	#endregion
 
@@ -55,11 +59,26 @@ public class Automapping : Profile
 	private void RequestToEntity_Doctors()
 	{
 		CreateMap<RequestRegisterDoctorJson, Doctor>();
+		CreateMap<RequestUpdateDoctorJson, Doctor>();
 	}
 	private void EntityToResponse_Doctors()
 	{
 		CreateMap<Doctor, ResponseRegisteredDoctorJson>();
-		CreateMap<Doctor, ResponseDoctorsListJson>();
+		CreateMap<Doctor, ResponseDoctorsJson>();
 	}
+	#endregion
+
+	#region Automapper para users
+
+	private void RequestoToEntity_Users()
+	{
+		CreateMap<RequestRegisterUserJson, User>().ForMember(user => user.Password, mapper => mapper.Ignore());
+	}
+
+	private void EntityToResponse_Users()
+	{
+		CreateMap<User, ResponseUserJson>();
+	}
+
 	#endregion
 }

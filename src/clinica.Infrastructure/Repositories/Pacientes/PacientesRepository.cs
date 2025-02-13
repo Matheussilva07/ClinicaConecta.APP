@@ -4,10 +4,10 @@ using clinica.Infrastructure.DataAccess;
 using MongoDB.Driver;
 
 namespace clinica.Infrastructure.Repositories.FuncionariosGerais;
-internal class PacientesRepository : IWriteOnly_Pacientes_Repository, IReadOnly_Pacientes_Repository, IUpdateOnly_Pacientes_Repository
+internal class PacientesRepository : IWriteOnlyPacientesRepository, IReadOnlyPacientesRepository, IUpdateOnlyPacientesRepository
 {
 
-	private readonly IMongoCollection<Paciente> _pacientes = ClinicaDbContext.GetPacientesCollectionID();
+	private readonly IMongoCollection<Paciente> _pacientes = ClinicaDbContext.GetPacientesCollection();
 
 	public async Task AddAsync(Paciente paciente)
 	{

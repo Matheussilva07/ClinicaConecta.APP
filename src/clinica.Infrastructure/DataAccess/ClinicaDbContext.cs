@@ -13,7 +13,7 @@ internal class ClinicaDbContext
 		return client;
 	}
 
-	public static IMongoCollection<Paciente> GetPacientesCollectionID()
+	public static IMongoCollection<Paciente> GetPacientesCollection()
 	{
 		var client = GetMongoClient();
 
@@ -23,7 +23,7 @@ internal class ClinicaDbContext
 
 		return collection;
 	}
-	public static IMongoCollection<Funcionario> GetFuncionariosCollectionID()
+	public static IMongoCollection<Funcionario> GetFuncionariosCollection()
 	{
 		var client = GetMongoClient();
 
@@ -33,13 +33,24 @@ internal class ClinicaDbContext
 
 		return collection;
 	}
-	public static IMongoCollection<Doctor> GetDoutoresCollectionID()
+	public static IMongoCollection<Doctor> GetDoutoresCollection()
 	{
 		var client = GetMongoClient();
 
 		var db = client.GetDatabase("Clinica_Conecta_DB");
 
 		var collection = db.GetCollection<Doctor>("Doutores");
+
+		return collection;
+	}
+
+	public static IMongoCollection<User> GetUsersCollection()
+	{
+		var client = GetMongoClient();
+
+		var db = client.GetDatabase("Clinica_Conecta_DB");
+
+		var collection = db.GetCollection<User>("Users");
 
 		return collection;
 	}

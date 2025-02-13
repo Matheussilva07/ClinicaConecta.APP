@@ -300,6 +300,7 @@ partial class FormularioCadastrarDoutores
 		Btn_Delete.TabIndex = 52;
 		Btn_Delete.Text = "Deletar";
 		Btn_Delete.UseVisualStyleBackColor = false;
+		Btn_Delete.Click += Btn_Delete_Click;
 		// 
 		// Btn_Atualizar
 		// 
@@ -312,6 +313,7 @@ partial class FormularioCadastrarDoutores
 		Btn_Atualizar.TabIndex = 51;
 		Btn_Atualizar.Text = "Atualizar";
 		Btn_Atualizar.UseVisualStyleBackColor = false;
+		Btn_Atualizar.Click += Btn_Atualizar_Click;
 		// 
 		// Btn_Pesquisar
 		// 
@@ -324,6 +326,7 @@ partial class FormularioCadastrarDoutores
 		Btn_Pesquisar.TabIndex = 50;
 		Btn_Pesquisar.Text = "Pesquisar";
 		Btn_Pesquisar.UseVisualStyleBackColor = false;
+		Btn_Pesquisar.Click += Btn_Pesquisar_Click;
 		// 
 		// Btn_Cadastrar
 		// 
@@ -445,6 +448,7 @@ partial class FormularioCadastrarDoutores
 		Name = "FormularioCadastrarDoutores";
 		StartPosition = FormStartPosition.CenterScreen;
 		Text = "FormularioCadastrarDoutores";
+		Load += FormularioCadastrarDoutores_Load;
 		ResumeLayout(false);
 		PerformLayout();
 	}

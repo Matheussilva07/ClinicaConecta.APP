@@ -4,12 +4,12 @@ using Clinica.Desktop.HTTP_Pacientes;
 namespace Clinica.Desktop.Formularios;
 public partial class FormularioCadastrarPacientes : Form
 {
-	private string _id;
-	private readonly string _name;
-	private readonly string _email;
-	private readonly string _phone;
-	private readonly string _cpf;
-	private readonly string _address;
+	private string? _id;
+	private readonly string? _name;
+	private readonly string? _email;
+	private readonly string? _phone;
+	private readonly string? _cpf;
+	private readonly string? _address;
 	private readonly DateTime _birth;
 
 	public FormularioCadastrarPacientes()

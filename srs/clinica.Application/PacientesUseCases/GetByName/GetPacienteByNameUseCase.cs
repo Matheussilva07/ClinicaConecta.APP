@@ -6,9 +6,9 @@ namespace clinica.Application.PacientesUseCases.GetByName;
 internal class GetPacienteByNameUseCase : IGetPacienteByNameUseCase
 {
 	private readonly IMapper _mapper;
-	private readonly IReadOnly_Pacientes_Repository _repository;
+	private readonly IReadOnlyPacientesRepository _repository;
 
-	public GetPacienteByNameUseCase(IMapper mapper, IReadOnly_Pacientes_Repository repository)
+	public GetPacienteByNameUseCase(IMapper mapper, IReadOnlyPacientesRepository repository)
 	{
 		_mapper = mapper;
 		_repository = repository;

@@ -7,9 +7,9 @@ namespace clinica.Application.PacientesUseCases.Update;
 internal class UpdatePacienteUseCase : IUpdatePacienteUseCase
 {
 	private readonly IMapper _mapper;
-	private readonly IUpdateOnly_Pacientes_Repository _repository;
+	private readonly IUpdateOnlyPacientesRepository _repository;
 
-	public UpdatePacienteUseCase(IMapper mapper, IUpdateOnly_Pacientes_Repository repository)
+	public UpdatePacienteUseCase(IMapper mapper, IUpdateOnlyPacientesRepository repository)
 	{
 		_mapper = mapper;
 		_repository = repository;

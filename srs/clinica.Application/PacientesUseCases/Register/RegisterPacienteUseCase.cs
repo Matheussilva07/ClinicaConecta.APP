@@ -8,9 +8,9 @@ namespace clinica.Application.PacientesUseCases.Register;
 internal class RegisterPacienteUseCase : IRegisterPacienteUseCase
 {	
 	private readonly IMapper _mapper;
-	private readonly IWriteOnly_Pacientes_Repository _repository;
+	private readonly IWriteOnlyPacientesRepository _repository;
 
-	public RegisterPacienteUseCase(IWriteOnly_Pacientes_Repository repository, IMapper mapper)
+	public RegisterPacienteUseCase(IWriteOnlyPacientesRepository repository, IMapper mapper)
 	{
 		_repository = repository;
 		_mapper = mapper;

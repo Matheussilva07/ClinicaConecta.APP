@@ -91,6 +91,7 @@ partial class Principal
 		button4.TabIndex = 3;
 		button4.Text = "Consultas";
 		button4.UseVisualStyleBackColor = false;
+		button4.Click += Btn_Consultas_Click;
 		// 
 		// Btn_Funcionarios
 		// 

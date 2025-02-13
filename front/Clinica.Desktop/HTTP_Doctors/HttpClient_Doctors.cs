@@ -18,26 +18,92 @@ internal class HttpClient_Doctors
 
 	public static async Task<bool> DoPost(RequestRegisterDoctorJson request)
 	{
-		const string route = "/doutores";
+		try
+		{
+			const string route = "/doutores";
 
-		var client = GetClient();
+			var client = GetClient();
 
-		HttpResponseMessage httpResponse = await client.PostAsJsonAsync(requestUri: route, value: request);
+			HttpResponseMessage httpResponse = await client.PostAsJsonAsync(requestUri: route, value: request);
 
-		return httpResponse.IsSuccessStatusCode;
+			return httpResponse.IsSuccessStatusCode;
+		}
+		catch
+		{
+			MessageBox.Show("Erro na requisição");
+			return false;
+		}
 	}
+
 	public static async Task<List<ResponseDoctor>?> DoGetAll()
 	{
 		var client = GetClient();
 
 		const string ROUTE = "/doutores";
 
-		HttpResponseMessage httpResponse =	await client.GetAsync(ROUTE);
+		HttpResponseMessage httpResponse = await client.GetAsync(ROUTE);
 
-		var response = await  httpResponse.Content.ReadAsStringAsync();
+		var response = await httpResponse.Content.ReadAsStringAsync();
 
 		return JsonConvert.DeserializeObject<List<ResponseDoctor>>(response);
 	}
 
+	public static async Task<ResponseDoctor?> DoGetByName(string name)
+	{
+		try
+		{
+			string ROUTE = "/doutores";
 
+			var client = GetClient();
+
+			HttpResponseMessage httpResponse = await client.GetAsync($"{ROUTE}/{name}");
+
+			var response = await httpResponse.Content.ReadAsStringAsync();
+
+			return JsonConvert.DeserializeObject<ResponseDoctor>(response);
+		}
+		catch
+		{
+			MessageBox.Show("Erro na requisição");
+			return null;
+		}
+	}
+
+	public static async Task<bool> DoPut(RequestUpdateDoctorJson request, string id)
+	{
+		try
+		{
+			var client = GetClient();
+
+			string ROUTE = $"/doutores/{id}";
+
+			HttpResponseMessage httpResponse = await client.PutAsJsonAsync(ROUTE, request);
+
+			return httpResponse.IsSuccessStatusCode;
+		}
+		catch
+		{
+			MessageBox.Show("Erro ao fazer a requisição");
+			return false;
+		}
+	}
+
+	public static async Task<bool> DoDelete(string id)
+	{
+		try
+		{
+			var client = GetClient();
+
+			string ROUTE = $"/doutores/{id}";
+
+			HttpResponseMessage httpResponse = await client.DeleteAsync(ROUTE);
+
+			return httpResponse.IsSuccessStatusCode;
+		}
+		catch
+		{
+			MessageBox.Show("Erro na requisição");
+			return false;
+		}
+	}
 }

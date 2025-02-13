@@ -8,7 +8,7 @@ namespace clinica.Infrastructure.Repositories.FuncionariosGerais;
 internal class FuncionariosRepository : IWriteOnlyWorkersRepository, IReadOnlyWorkersRepository, IUpdateOnlyWorkersRepository
 {
 
-	private readonly IMongoCollection<Funcionario> _funcionarios = ClinicaDbContext.GetFuncionariosCollectionID();
+	private readonly IMongoCollection<Funcionario> _funcionarios = ClinicaDbContext.GetFuncionariosCollection();
 
 	public async Task AddAsync(Funcionario funcionarioGeral)
 	{

@@ -1,6 +1,6 @@
 ﻿namespace clinica.Communication.Doctors.Enums;
 public enum Expiration
 {
-	expire = 0,
-	curent = 1,
+	Vencido = 0,
+	Vigente = 1,
 }

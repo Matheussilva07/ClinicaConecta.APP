@@ -1,5 +1,8 @@
 using clinica.Infrastructure;
 using clinica.Application;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace clinica.API;
 
@@ -18,9 +21,28 @@ public class Program
 
 		builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
-		builder.Services.AddInfrastructure();
+		builder.Services.AddInfrastructure(builder.Configuration);
 		builder.Services.AddInstrastructure_Application();
 
+
+		builder.Services.AddAuthentication(config =>
+		{
+			config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+			config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+		}).AddJwtBearer(config =>
+		{
+			config.TokenValidationParameters = new TokenValidationParameters
+			{
+				ValidateIssuer = false,
+				ValidateAudience = false,
+				ClockSkew = new TimeSpan(0),
+				IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>("Settings:Jwt:SigningKey")!))
+
+			};
+		});
+
+	
 		var app = builder.Build();
 
 		// Configure the HTTP request pipeline.
@@ -31,6 +53,8 @@ public class Program
 		}
 
 		app.UseHttpsRedirection();
+
+		app.UseAuthentication();
 
 		app.UseAuthorization();
 

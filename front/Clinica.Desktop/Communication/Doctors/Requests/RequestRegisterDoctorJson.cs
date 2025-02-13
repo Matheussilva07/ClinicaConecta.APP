@@ -18,6 +18,4 @@ internal class RequestRegisterDoctorJson
 	public int Work_hours { get; set; }
 	public string Turns { get; set; } = string.Empty;
 	public string BankAccount { get; set; } = string.Empty;
-
-
 }
