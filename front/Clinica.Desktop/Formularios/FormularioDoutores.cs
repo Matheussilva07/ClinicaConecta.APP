@@ -46,7 +46,7 @@ public partial class FormularioDoutores : Form
 			string bankAccount = dataGridView_Doctors.Rows[e.RowIndex].Cells["BankAccount"].Value.ToString()!;
 
 
-			var form = new FormularioCadastrarDoutores(id,name,email,cpf,rg,address,telephone,expertise,date_hire,date_fire, value, expiration, sessions,work_hours,turns,bankAccount);
+			var form = new FormularioCadastrarDoutores(id,name,email,telephone,cpf,rg,address,expertise,date_hire,date_fire, value, expiration, sessions,work_hours,turns,bankAccount);
 			form.ShowDialog();
 		}
 	}

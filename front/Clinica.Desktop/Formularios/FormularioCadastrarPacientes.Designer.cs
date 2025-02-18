@@ -52,7 +52,7 @@ partial class FormularioCadastrarPacientes
 		Btn_Cadastrar_Pacientes.BackColor = Color.DarkSeaGreen;
 		Btn_Cadastrar_Pacientes.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Btn_Cadastrar_Pacientes.ForeColor = SystemColors.ButtonHighlight;
-		Btn_Cadastrar_Pacientes.Location = new Point(9, 296);
+		Btn_Cadastrar_Pacientes.Location = new Point(14, 296);
 		Btn_Cadastrar_Pacientes.Name = "Btn_Cadastrar_Pacientes";
 		Btn_Cadastrar_Pacientes.Size = new Size(137, 48);
 		Btn_Cadastrar_Pacientes.TabIndex = 2;
@@ -65,7 +65,7 @@ partial class FormularioCadastrarPacientes
 		Btn_Pesquisar_Pacientes.BackColor = Color.DarkSeaGreen;
 		Btn_Pesquisar_Pacientes.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Btn_Pesquisar_Pacientes.ForeColor = SystemColors.ButtonHighlight;
-		Btn_Pesquisar_Pacientes.Location = new Point(152, 296);
+		Btn_Pesquisar_Pacientes.Location = new Point(157, 296);
 		Btn_Pesquisar_Pacientes.Name = "Btn_Pesquisar_Pacientes";
 		Btn_Pesquisar_Pacientes.Size = new Size(137, 48);
 		Btn_Pesquisar_Pacientes.TabIndex = 3;
@@ -78,7 +78,7 @@ partial class FormularioCadastrarPacientes
 		Btn_Atualizar_Pacientes.BackColor = Color.DarkSeaGreen;
 		Btn_Atualizar_Pacientes.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Btn_Atualizar_Pacientes.ForeColor = SystemColors.ButtonHighlight;
-		Btn_Atualizar_Pacientes.Location = new Point(295, 296);
+		Btn_Atualizar_Pacientes.Location = new Point(300, 296);
 		Btn_Atualizar_Pacientes.Name = "Btn_Atualizar_Pacientes";
 		Btn_Atualizar_Pacientes.Size = new Size(137, 48);
 		Btn_Atualizar_Pacientes.TabIndex = 4;
@@ -91,7 +91,7 @@ partial class FormularioCadastrarPacientes
 		Btn_Delete_Pacientes.BackColor = Color.DarkSeaGreen;
 		Btn_Delete_Pacientes.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Btn_Delete_Pacientes.ForeColor = SystemColors.ButtonHighlight;
-		Btn_Delete_Pacientes.Location = new Point(438, 296);
+		Btn_Delete_Pacientes.Location = new Point(443, 296);
 		Btn_Delete_Pacientes.Name = "Btn_Delete_Pacientes";
 		Btn_Delete_Pacientes.Size = new Size(137, 48);
 		Btn_Delete_Pacientes.TabIndex = 5;
@@ -220,12 +220,13 @@ partial class FormularioCadastrarPacientes
 		Lbl_ID.Size = new Size(28, 18);
 		Lbl_ID.TabIndex = 19;
 		Lbl_ID.Text = "Id:";
+		Lbl_ID.Visible = false;
 		// 
 		// FormularioCadastrarPacientes
 		// 
 		AutoScaleDimensions = new SizeF(7F, 15F);
 		AutoScaleMode = AutoScaleMode.Font;
-		ClientSize = new Size(773, 368);
+		ClientSize = new Size(595, 368);
 		Controls.Add(Lbl_ID);
 		Controls.Add(label6);
 		Controls.Add(Txt_Birth);
@@ -243,6 +244,7 @@ partial class FormularioCadastrarPacientes
 		Controls.Add(Btn_Atualizar_Pacientes);
 		Controls.Add(Btn_Pesquisar_Pacientes);
 		Controls.Add(Btn_Cadastrar_Pacientes);
+		FormBorderStyle = FormBorderStyle.FixedSingle;
 		Name = "FormularioCadastrarPacientes";
 		StartPosition = FormStartPosition.CenterScreen;
 		Text = "FormularioCadastrarPacientes";

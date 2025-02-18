@@ -12,6 +12,15 @@ public partial class FormularioCadastrarPacientes : Form
 	private readonly string? _address;
 	private readonly DateTime _birth;
 
+	public FormularioCadastrarPacientes(bool isButttonVisible)
+	{
+		InitializeComponent();
+		Btn_Cadastrar_Pacientes.Visible = isButttonVisible;
+		Btn_Atualizar_Pacientes.Visible = isButttonVisible;
+		Btn_Delete_Pacientes.Visible = isButttonVisible;
+
+		Btn_Pesquisar_Pacientes.Location = new Point(14, 296);
+	}
 	public FormularioCadastrarPacientes()
 	{
 		InitializeComponent();
@@ -43,16 +52,16 @@ public partial class FormularioCadastrarPacientes : Form
 			Address = Txt_Address.Text,
 			Birth = Txt_Birth.Value,
 			CPF = Txt_CPF.Text,
-			Telephone = Txt_Telephone.Text,	
+			Telephone = Txt_Telephone.Text,
 		};
 
 		bool result = await HttpClient_Pacientes.DoPost(request);
 
-		if (result) 
+		if (result)
 		{
 			MessageBox.Show("Paciente cadastrado com sucesso!");
 		}
-		else 
+		else
 		{
 			MessageBox.Show("Erro ao cadastrar o paciente!");
 		}
@@ -102,7 +111,7 @@ public partial class FormularioCadastrarPacientes : Form
 
 		var paciente = await HttpClient_Pacientes.DoGetByName(name);
 
-		if(paciente is not null)
+		if (paciente is not null)
 		{
 			_id = paciente.Id;
 			Txt_Name.Text = paciente.Name;
@@ -114,3 +123,5 @@ public partial class FormularioCadastrarPacientes : Form
 		}
 	}
 }
+
+

@@ -43,7 +43,6 @@ internal class ClinicaDbContext
 
 		return collection;
 	}
-
 	public static IMongoCollection<User> GetUsersCollection()
 	{
 		var client = GetMongoClient();
@@ -51,6 +50,16 @@ internal class ClinicaDbContext
 		var db = client.GetDatabase("Clinica_Conecta_DB");
 
 		var collection = db.GetCollection<User>("Users");
+
+		return collection;
+	}
+	public static IMongoCollection<Consulta> GetConsultasCollection()
+	{
+		var client = GetMongoClient();
+
+		var db = client.GetDatabase("Clinica_Conecta_DB");
+
+		var collection = db.GetCollection<Consulta>("Consultas");
 
 		return collection;
 	}

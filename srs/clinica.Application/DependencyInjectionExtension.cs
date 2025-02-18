@@ -1,4 +1,5 @@
 ﻿using clinica.Application.Automapper;
+using clinica.Application.ConsultasUseCases.Register;
 using clinica.Application.Doctors.GetAll;
 using clinica.Application.Doctors.GetByName;
 using clinica.Application.Doctors.Register;
@@ -28,6 +29,7 @@ public static class DependencyInjectionExtension
 		AddDependencyInjectionWorkers(services);
 		AddDependencyInjectionDoctors(services);
 		AddDependencyInjectionUsers(services);
+		AddDependencyInjectionConsultas(services);
 	}
 
 	private static void AddAutoMapper(IServiceCollection services)
@@ -68,5 +70,11 @@ public static class DependencyInjectionExtension
 		services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
 
 		services.AddScoped<IDoLoginUserUseCase, DoLoginUserUseCase>();
+	}	
+
+	private static void AddDependencyInjectionConsultas(IServiceCollection services)
+	{
+		services.AddScoped<IRegisterConsultaUseCase, RegisterConsultaUseCase>();
+
 	}
 }

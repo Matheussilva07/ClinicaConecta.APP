@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using clinica.Communication.Consultas.Requests;
+using clinica.Communication.Consultas.Responses;
 using clinica.Communication.Doctors.Requests;
 using clinica.Communication.Doctors.Responses;
 using clinica.Communication.Funcionarios.Requests;
@@ -24,6 +26,8 @@ public class Automapping : Profile
 		EntityToResponse_Doctors();
 		RequestoToEntity_Users();
 		EntityToResponse_Users();
+		RequestToEntity_Consultas();
+		EntityToResponse_Consultas();
 	}
 
 	#region Automapper para pacientes
@@ -78,6 +82,19 @@ public class Automapping : Profile
 	private void EntityToResponse_Users()
 	{
 		CreateMap<User, ResponseUserJson>();
+	}
+
+	#endregion
+
+	#region Automapper para consultas
+
+	private void RequestToEntity_Consultas()
+	{
+		CreateMap<RequestRegisterConsultaJson, Consulta>();
+	}
+	private void EntityToResponse_Consultas()
+	{
+		CreateMap<Consulta, ResponseRegisteredConsultaJson>();
 	}
 
 	#endregion

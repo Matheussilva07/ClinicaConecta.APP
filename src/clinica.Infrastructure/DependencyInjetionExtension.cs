@@ -1,10 +1,12 @@
-﻿using clinica.Domain.Repositories.Doutores;
+﻿using clinica.Domain.Repositories.Consultas;
+using clinica.Domain.Repositories.Doutores;
 using clinica.Domain.Repositories.Funcionarios;
 using clinica.Domain.Repositories.FuncionariosGerais;
 using clinica.Domain.Repositories.Pacientes;
 using clinica.Domain.Repositories.Users;
 using clinica.Domain.Security.Cryptography;
 using clinica.Domain.Security.Token;
+using clinica.Infrastructure.Repositories.Consultas;
 using clinica.Infrastructure.Repositories.Doutores;
 using clinica.Infrastructure.Repositories.FuncionariosGerais;
 using clinica.Infrastructure.Repositories.Users;
@@ -22,6 +24,8 @@ public static class DependencyInjetionExtension
 		AddDependencyInjection_Funcionarios(services);
 		AddDependencyInjection_Doutores(services);
 		AddDependencyInjection_Users(services);
+		AddDependencyInjection_Consultas(services);
+
 		AddTokenGenerator(services, configuration);
 
 	}
@@ -50,6 +54,11 @@ public static class DependencyInjetionExtension
 		services.AddScoped<IReadOnlyUserRepository, UsersRepository>();
 
 		services.AddScoped<IPasswordEncryptor, PasswordEncryptor>();
+	}
+	private static void AddDependencyInjection_Consultas(IServiceCollection services)
+	{
+		services.AddScoped<IWriteOnlyConsultasRepository, ConsultasRepository>();
+	
 	}
 
 	private static void AddTokenGenerator(IServiceCollection services, IConfiguration configuration)

@@ -10,7 +10,7 @@ internal class HttpClient_workers
 	{
 		var client = new HttpClient
 		{
-			BaseAddress = new Uri("http://localhost:5054/")
+			BaseAddress = new Uri("https://localhost:7147/")
 		};
 
 		return client;
