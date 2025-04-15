@@ -31,7 +31,7 @@ partial class Principal
 		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
 		panel1 = new Panel();
 		button6 = new Button();
-		button5 = new Button();
+		Btn_Salas = new Button();
 		button4 = new Button();
 		Btn_Funcionarios = new Button();
 		button2 = new Button();
@@ -46,7 +46,7 @@ partial class Principal
 		panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
 		panel1.BackColor = Color.DarkSeaGreen;
 		panel1.Controls.Add(button6);
-		panel1.Controls.Add(button5);
+		panel1.Controls.Add(Btn_Salas);
 		panel1.Controls.Add(button4);
 		panel1.Controls.Add(Btn_Funcionarios);
 		panel1.Controls.Add(button2);
@@ -68,17 +68,17 @@ partial class Principal
 		button6.Text = "Relatórios";
 		button6.UseVisualStyleBackColor = false;
 		// 
-		// button5
+		// Btn_Salas
 		// 
-		button5.BackColor = Color.DarkSeaGreen;
-		button5.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		button5.ForeColor = SystemColors.ButtonHighlight;
-		button5.Location = new Point(33, 322);
-		button5.Name = "button5";
-		button5.Size = new Size(137, 48);
-		button5.TabIndex = 4;
-		button5.Text = "Salas";
-		button5.UseVisualStyleBackColor = false;
+		Btn_Salas.BackColor = Color.DarkSeaGreen;
+		Btn_Salas.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+		Btn_Salas.ForeColor = SystemColors.ButtonHighlight;
+		Btn_Salas.Location = new Point(33, 322);
+		Btn_Salas.Name = "Btn_Salas";
+		Btn_Salas.Size = new Size(137, 48);
+		Btn_Salas.TabIndex = 4;
+		Btn_Salas.Text = "Salas";
+		Btn_Salas.UseVisualStyleBackColor = false;
 		// 
 		// button4
 		// 
@@ -166,6 +166,6 @@ partial class Principal
 	private Button button2;
 	private Button Btn_PacientesForm;
 	private Button button6;
-	private Button button5;
+	private Button Btn_Salas;
 	private Button button4;
 }

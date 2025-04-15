@@ -113,7 +113,7 @@ internal class HttpClient_Pacientes
 		}
 		catch
 		{
-			MessageBox.Show("Paciente não encontrado!");
+			MessageBox.Show("Erro na requisição.");
 			return null;
 		}
 	}

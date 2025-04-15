@@ -57,6 +57,7 @@ partial class FormularioConsultas
 		label10 = new Label();
 		label11 = new Label();
 		Btn_Cadastrar = new Button();
+		Btn_Pesquisar_Profissional = new Button();
 		groupBox1.SuspendLayout();
 		groupBox2.SuspendLayout();
 		groupBox3.SuspendLayout();
@@ -179,6 +180,7 @@ partial class FormularioConsultas
 		// groupBox3
 		// 
 		groupBox3.BackColor = SystemColors.ButtonFace;
+		groupBox3.Controls.Add(Btn_Pesquisar_Profissional);
 		groupBox3.Controls.Add(txt_Especialidade);
 		groupBox3.Controls.Add(label9);
 		groupBox3.Controls.Add(txt_Nome_Profissional);
@@ -347,6 +349,17 @@ partial class FormularioConsultas
 		Btn_Cadastrar.UseVisualStyleBackColor = false;
 		Btn_Cadastrar.Click += Btn_Salvar_Agendamento_Click;
 		// 
+		// Btn_Pesquisar_Profissional
+		// 
+		Btn_Pesquisar_Profissional.ForeColor = SystemColors.ControlText;
+		Btn_Pesquisar_Profissional.Image = (Image)resources.GetObject("Btn_Pesquisar_Profissional.Image");
+		Btn_Pesquisar_Profissional.Location = new Point(742, 12);
+		Btn_Pesquisar_Profissional.Name = "Btn_Pesquisar_Profissional";
+		Btn_Pesquisar_Profissional.Size = new Size(35, 33);
+		Btn_Pesquisar_Profissional.TabIndex = 8;
+		Btn_Pesquisar_Profissional.UseVisualStyleBackColor = true;
+		Btn_Pesquisar_Profissional.Click += Btn_Pesquisar_Profissional_Click;
+		// 
 		// FormularioConsultas
 		// 
 		AutoScaleDimensions = new SizeF(7F, 15F);
@@ -363,7 +376,6 @@ partial class FormularioConsultas
 		Name = "FormularioConsultas";
 		StartPosition = FormStartPosition.CenterScreen;
 		Text = "FormularioConsultas";
-		MouseHover += FormularioConsultas_MouseHover;
 		groupBox1.ResumeLayout(false);
 		groupBox1.PerformLayout();
 		groupBox2.ResumeLayout(false);
@@ -407,4 +419,5 @@ partial class FormularioConsultas
 	private TextBox txt_Desconto;
 	private Label label6;
 	private Button button1;
+	private Button Btn_Pesquisar_Profissional;
 }

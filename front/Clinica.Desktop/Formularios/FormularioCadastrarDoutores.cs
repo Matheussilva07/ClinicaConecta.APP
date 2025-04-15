@@ -1,5 +1,6 @@
 ﻿using Clinica.Desktop.Communication.Doctors.Enums;
 using Clinica.Desktop.Communication.Doctors.Requests;
+using Clinica.Desktop.Communication.Doctors.Responses;
 using Clinica.Desktop.HTTP_Doctors;
 
 namespace Clinica.Desktop.Formularios;
@@ -21,9 +22,22 @@ public partial class FormularioCadastrarDoutores : Form
 	private readonly int? _work_hours;
 	private readonly string? _turns;
 	private readonly string? _bankAccount;
+
+	public ResponseDoctor? Doctor { get; set; }
+
 	public FormularioCadastrarDoutores()
 	{
 		InitializeComponent();
+	}
+	public FormularioCadastrarDoutores(bool isButtonVisible)
+	{
+		InitializeComponent();
+		Btn_Atualizar.Visible = isButtonVisible;
+		Btn_Cadastrar.Visible = isButtonVisible;
+		Btn_Delete.Visible = isButtonVisible;
+		this.Width = 559;
+		this.Height = 467;
+		Btn_Pesquisar.Location = new Point(8, 366);
 	}
 	public FormularioCadastrarDoutores(string id, string name, string email, string phone, string cpf, string rg, string address,
 									   string expertise, DateTime dateHire, DateTime dateFire, decimal value, Expiration expiration,
@@ -114,29 +128,29 @@ public partial class FormularioCadastrarDoutores : Form
 	{
 		string name = Txt_Name.Text;
 
-		var doctor = await HttpClient_Doctors.DoGetByName(name);
+		Doctor = await HttpClient_Doctors.DoGetByName(name);
 
-		if (doctor is null)
+		if (Doctor is null)
 		{
 			MessageBox.Show("Cadastro não encontrado");
 		}
 
-		Lbl_ID.Text = doctor.Id;
-		Txt_Name.Text = doctor.Name;
-		Txt_Email.Text = doctor.Email;
-		Txt_CPF.Text = doctor.Cpf;
-		Txt_RG.Text = doctor.Rg;
-		Txt_Address.Text = doctor.Address;
-		Txt_Telephone.Text = doctor.Telephone;
-		Txt_Especialidade.Text = doctor.Expertise;
-		Txt_Date_Hire.Text = doctor.Date_Hire.ToString();
-		Txt_Date_Fire.Text = doctor.Date_Fire.ToString();
-		Txt_Valor.Text = doctor.Value.ToString();
-		comboBox_Vencimento.Text = doctor.Expiration.ToString();
-		Txt_Sessoes.Text = doctor.Sessions.ToString();
-		Txt_WorkHours.Text = doctor.Work_hours.ToString();
-		Txt_Turnos.Text = doctor.Turns.ToString();
-		Txt_Account.Text = doctor.BankAccount;
+		Lbl_ID.Text = Doctor.Id;
+		Txt_Name.Text = Doctor.Name;
+		Txt_Email.Text = Doctor.Email;
+		Txt_CPF.Text = Doctor.Cpf;
+		Txt_RG.Text = Doctor.Rg;
+		Txt_Address.Text = Doctor.Address;
+		Txt_Telephone.Text = Doctor.Telephone;
+		Txt_Especialidade.Text = Doctor.Expertise;
+		Txt_Date_Hire.Text = Doctor.Date_Hire.ToString();
+		Txt_Date_Fire.Text = Doctor.Date_Fire.ToString();
+		Txt_Valor.Text = Doctor.Value.ToString();
+		comboBox_Vencimento.Text = Doctor.Expiration.ToString();
+		Txt_Sessoes.Text = Doctor.Sessions.ToString();
+		Txt_WorkHours.Text = Doctor.Work_hours.ToString();
+		Txt_Turnos.Text = Doctor.Turns.ToString();
+		Txt_Account.Text = Doctor.BankAccount;
 
 	}
 
@@ -169,7 +183,7 @@ public partial class FormularioCadastrarDoutores : Form
 
 		};
 
-		bool isSuccessfull = await HttpClient_Doctors.DoPut(request, _id);
+		bool isSuccessfull = await HttpClient_Doctors.DoPut(request, Lbl_ID.Text);
 
 		if (isSuccessfull)
 		{

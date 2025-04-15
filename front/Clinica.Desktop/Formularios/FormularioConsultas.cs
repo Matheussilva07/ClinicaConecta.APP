@@ -16,6 +16,9 @@ public partial class FormularioConsultas : Form
 	public FormularioConsultas(string name, string cpf, string phone)
 	{
 		InitializeComponent();
+		_name = name;
+		_cpf = cpf;
+		_phone = phone;
 
 	}
 
@@ -129,6 +132,25 @@ public partial class FormularioConsultas : Form
 	{
 		var form = new FormularioCadastrarPacientes(false);
 		form.ShowDialog();
+
+		if (form.Paciente is not null)
+		{
+			txt_Nome.Text = form.Paciente.Name;
+			txt_CPF.Text = form.Paciente.CPF;
+			txt_Celular.Text = form.Paciente.Telephone;
+		}
+
+	}
+	private void Btn_Pesquisar_Profissional_Click(object sender, EventArgs e)
+	{
+		var form = new FormularioCadastrarDoutores(false);
+		form.ShowDialog();
+
+		if(form.Doctor is not null)
+		{
+			txt_Nome_Profissional.Text = form.Doctor.Name;
+			txt_Especialidade.Text = form.Doctor.Expertise;
+		}
 
 	}
 }

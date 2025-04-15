@@ -1,4 +1,5 @@
 ﻿using Clinica.Desktop.Communication.Pacientes.Requests;
+using Clinica.Desktop.Communication.Pacientes.Responses;
 using Clinica.Desktop.HTTP_Pacientes;
 
 namespace Clinica.Desktop.Formularios;
@@ -11,6 +12,7 @@ public partial class FormularioCadastrarPacientes : Form
 	private readonly string? _cpf;
 	private readonly string? _address;
 	private readonly DateTime _birth;
+	public ResponseRegisteredPaciente? Paciente { get; set; }
 
 	public FormularioCadastrarPacientes(bool isButttonVisible)
 	{
@@ -109,17 +111,20 @@ public partial class FormularioCadastrarPacientes : Form
 	{
 		string name = Txt_Name.Text;
 
-		var paciente = await HttpClient_Pacientes.DoGetByName(name);
+		Paciente = await HttpClient_Pacientes.DoGetByName(name);
 
-		if (paciente is not null)
+		if (Paciente is not null)
 		{
-			_id = paciente.Id;
-			Txt_Name.Text = paciente.Name;
-			Txt_Email.Text = paciente.Email;
-			Txt_Telephone.Text = paciente.Telephone;
-			Txt_CPF.Text = paciente.CPF;
-			Txt_Address.Text = paciente.Address;
-			Txt_Birth.Value = paciente.Birth;
+			_id = Paciente.Id;
+			Txt_Name.Text = Paciente.Name;
+			Txt_Email.Text = Paciente.Email;
+			Txt_Telephone.Text = Paciente.Telephone;
+			Txt_CPF.Text = Paciente.CPF;
+			Txt_Address.Text = Paciente.Address;
+			Txt_Birth.Value = Paciente.Birth;						
+		}
+		else{
+			MessageBox.Show("Paciente não encontrado.");
 		}
 	}
 }

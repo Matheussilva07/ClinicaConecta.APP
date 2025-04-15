@@ -1,7 +1,7 @@
 ﻿using Clinica.Desktop.Communication.Doctors.Enums;
 
 namespace Clinica.Desktop.Communication.Doctors.Responses;
-internal class ResponseDoctor
+public class ResponseDoctor
 {
 	public string Id { get; set; } = string.Empty;
 	public string Name { get; set; } = string.Empty;

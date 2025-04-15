@@ -69,7 +69,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label12.AutoSize = true;
 		label12.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label12.Location = new Point(571, 159);
+		label12.Location = new Point(546, 159);
 		label12.Name = "label12";
 		label12.Size = new Size(108, 18);
 		label12.TabIndex = 76;
@@ -79,7 +79,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label11.AutoSize = true;
 		label11.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label11.Location = new Point(571, 351);
+		label11.Location = new Point(546, 351);
 		label11.Name = "label11";
 		label11.Size = new Size(61, 18);
 		label11.TabIndex = 75;
@@ -88,7 +88,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Account
 		// 
 		Txt_Account.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Account.Location = new Point(708, 346);
+		Txt_Account.Location = new Point(683, 346);
 		Txt_Account.Name = "Txt_Account";
 		Txt_Account.Size = new Size(239, 26);
 		Txt_Account.TabIndex = 74;
@@ -97,7 +97,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label10.AutoSize = true;
 		label10.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label10.Location = new Point(571, 255);
+		label10.Location = new Point(546, 255);
 		label10.Name = "label10";
 		label10.Size = new Size(124, 18);
 		label10.TabIndex = 73;
@@ -106,7 +106,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_WorkHours
 		// 
 		Txt_WorkHours.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_WorkHours.Location = new Point(708, 244);
+		Txt_WorkHours.Location = new Point(683, 244);
 		Txt_WorkHours.Name = "Txt_WorkHours";
 		Txt_WorkHours.Size = new Size(239, 26);
 		Txt_WorkHours.TabIndex = 72;
@@ -116,7 +116,7 @@ partial class FormularioCadastrarDoutores
 		Txt_Date_Fire.CalendarFont = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Txt_Date_Fire.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Txt_Date_Fire.Format = DateTimePickerFormat.Short;
-		Txt_Date_Fire.Location = new Point(708, 64);
+		Txt_Date_Fire.Location = new Point(683, 64);
 		Txt_Date_Fire.Name = "Txt_Date_Fire";
 		Txt_Date_Fire.Size = new Size(239, 26);
 		Txt_Date_Fire.TabIndex = 71;
@@ -125,7 +125,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label9.AutoSize = true;
 		label9.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label9.Location = new Point(571, 63);
+		label9.Location = new Point(546, 63);
 		label9.Name = "label9";
 		label9.Size = new Size(91, 18);
 		label9.TabIndex = 70;
@@ -135,7 +135,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label8.AutoSize = true;
 		label8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label8.Location = new Point(16, 309);
+		label8.Location = new Point(8, 309);
 		label8.Name = "label8";
 		label8.Size = new Size(125, 18);
 		label8.TabIndex = 69;
@@ -144,7 +144,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Especialidade
 		// 
 		Txt_Especialidade.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Especialidade.Location = new Point(140, 306);
+		Txt_Especialidade.Location = new Point(132, 306);
 		Txt_Especialidade.Name = "Txt_Especialidade";
 		Txt_Especialidade.Size = new Size(187, 26);
 		Txt_Especialidade.TabIndex = 68;
@@ -162,7 +162,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_RG
 		// 
 		Txt_RG.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_RG.Location = new Point(81, 159);
+		Txt_RG.Location = new Point(73, 159);
 		Txt_RG.Name = "Txt_RG";
 		Txt_RG.Size = new Size(211, 26);
 		Txt_RG.TabIndex = 66;
@@ -171,7 +171,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		Lbl_ID.AutoSize = true;
 		Lbl_ID.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		Lbl_ID.Location = new Point(967, 15);
+		Lbl_ID.Location = new Point(939, 9);
 		Lbl_ID.Name = "Lbl_ID";
 		Lbl_ID.Size = new Size(28, 18);
 		Lbl_ID.TabIndex = 65;
@@ -181,7 +181,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label6.AutoSize = true;
 		label6.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label6.Location = new Point(16, 211);
+		label6.Location = new Point(8, 211);
 		label6.Name = "label6";
 		label6.Size = new Size(91, 18);
 		label6.TabIndex = 64;
@@ -192,7 +192,7 @@ partial class FormularioCadastrarDoutores
 		Txt_Date_Hire.CalendarFont = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Txt_Date_Hire.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Txt_Date_Hire.Format = DateTimePickerFormat.Short;
-		Txt_Date_Hire.Location = new Point(708, 15);
+		Txt_Date_Hire.Location = new Point(683, 15);
 		Txt_Date_Hire.Name = "Txt_Date_Hire";
 		Txt_Date_Hire.Size = new Size(239, 26);
 		Txt_Date_Hire.TabIndex = 63;
@@ -201,7 +201,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label5.AutoSize = true;
 		label5.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label5.Location = new Point(571, 15);
+		label5.Location = new Point(546, 15);
 		label5.Name = "label5";
 		label5.Size = new Size(91, 18);
 		label5.TabIndex = 62;
@@ -211,7 +211,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label4.AutoSize = true;
 		label4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label4.Location = new Point(16, 64);
+		label4.Location = new Point(8, 64);
 		label4.Name = "label4";
 		label4.Size = new Size(56, 18);
 		label4.TabIndex = 61;
@@ -221,7 +221,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label3.AutoSize = true;
 		label3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label3.Location = new Point(16, 260);
+		label3.Location = new Point(8, 260);
 		label3.Name = "label3";
 		label3.Size = new Size(70, 18);
 		label3.TabIndex = 60;
@@ -241,7 +241,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label1.AutoSize = true;
 		label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label1.Location = new Point(16, 15);
+		label1.Location = new Point(8, 15);
 		label1.Name = "label1";
 		label1.Size = new Size(59, 18);
 		label1.TabIndex = 58;
@@ -250,7 +250,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Email
 		// 
 		Txt_Email.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Email.Location = new Point(81, 61);
+		Txt_Email.Location = new Point(73, 61);
 		Txt_Email.Name = "Txt_Email";
 		Txt_Email.Size = new Size(457, 26);
 		Txt_Email.TabIndex = 57;
@@ -258,7 +258,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Address
 		// 
 		Txt_Address.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Address.Location = new Point(113, 208);
+		Txt_Address.Location = new Point(105, 208);
 		Txt_Address.Name = "Txt_Address";
 		Txt_Address.Size = new Size(425, 26);
 		Txt_Address.TabIndex = 56;
@@ -266,7 +266,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Telephone
 		// 
 		Txt_Telephone.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Telephone.Location = new Point(113, 257);
+		Txt_Telephone.Location = new Point(105, 257);
 		Txt_Telephone.Mask = "(00) 0 0000-0000";
 		Txt_Telephone.Name = "Txt_Telephone";
 		Txt_Telephone.Size = new Size(187, 26);
@@ -275,7 +275,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_CPF
 		// 
 		Txt_CPF.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_CPF.Location = new Point(81, 110);
+		Txt_CPF.Location = new Point(73, 110);
 		Txt_CPF.Mask = "000.000.000-00";
 		Txt_CPF.Name = "Txt_CPF";
 		Txt_CPF.Size = new Size(211, 26);
@@ -284,7 +284,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Name
 		// 
 		Txt_Name.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Name.Location = new Point(81, 12);
+		Txt_Name.Location = new Point(73, 12);
 		Txt_Name.Name = "Txt_Name";
 		Txt_Name.Size = new Size(457, 26);
 		Txt_Name.TabIndex = 53;
@@ -294,7 +294,7 @@ partial class FormularioCadastrarDoutores
 		Btn_Delete.BackColor = Color.DarkSeaGreen;
 		Btn_Delete.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Btn_Delete.ForeColor = SystemColors.ButtonHighlight;
-		Btn_Delete.Location = new Point(642, 413);
+		Btn_Delete.Location = new Point(613, 413);
 		Btn_Delete.Name = "Btn_Delete";
 		Btn_Delete.Size = new Size(137, 48);
 		Btn_Delete.TabIndex = 52;
@@ -307,7 +307,7 @@ partial class FormularioCadastrarDoutores
 		Btn_Atualizar.BackColor = Color.DarkSeaGreen;
 		Btn_Atualizar.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Btn_Atualizar.ForeColor = SystemColors.ButtonHighlight;
-		Btn_Atualizar.Location = new Point(499, 413);
+		Btn_Atualizar.Location = new Point(470, 413);
 		Btn_Atualizar.Name = "Btn_Atualizar";
 		Btn_Atualizar.Size = new Size(137, 48);
 		Btn_Atualizar.TabIndex = 51;
@@ -320,7 +320,7 @@ partial class FormularioCadastrarDoutores
 		Btn_Pesquisar.BackColor = Color.DarkSeaGreen;
 		Btn_Pesquisar.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Btn_Pesquisar.ForeColor = SystemColors.ButtonHighlight;
-		Btn_Pesquisar.Location = new Point(356, 413);
+		Btn_Pesquisar.Location = new Point(327, 413);
 		Btn_Pesquisar.Name = "Btn_Pesquisar";
 		Btn_Pesquisar.Size = new Size(137, 48);
 		Btn_Pesquisar.TabIndex = 50;
@@ -333,7 +333,7 @@ partial class FormularioCadastrarDoutores
 		Btn_Cadastrar.BackColor = Color.DarkSeaGreen;
 		Btn_Cadastrar.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		Btn_Cadastrar.ForeColor = SystemColors.ButtonHighlight;
-		Btn_Cadastrar.Location = new Point(213, 413);
+		Btn_Cadastrar.Location = new Point(182, 413);
 		Btn_Cadastrar.Name = "Btn_Cadastrar";
 		Btn_Cadastrar.Size = new Size(137, 48);
 		Btn_Cadastrar.TabIndex = 49;
@@ -345,7 +345,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label13.AutoSize = true;
 		label13.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label13.Location = new Point(571, 111);
+		label13.Location = new Point(546, 111);
 		label13.Name = "label13";
 		label13.Size = new Size(55, 18);
 		label13.TabIndex = 79;
@@ -354,7 +354,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Valor
 		// 
 		Txt_Valor.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Valor.Location = new Point(708, 111);
+		Txt_Valor.Location = new Point(683, 111);
 		Txt_Valor.Name = "Txt_Valor";
 		Txt_Valor.Size = new Size(239, 26);
 		Txt_Valor.TabIndex = 78;
@@ -362,7 +362,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Sessoes
 		// 
 		Txt_Sessoes.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Sessoes.Location = new Point(708, 199);
+		Txt_Sessoes.Location = new Point(683, 199);
 		Txt_Sessoes.Name = "Txt_Sessoes";
 		Txt_Sessoes.Size = new Size(239, 26);
 		Txt_Sessoes.TabIndex = 82;
@@ -371,7 +371,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label14.AutoSize = true;
 		label14.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label14.Location = new Point(571, 207);
+		label14.Location = new Point(546, 207);
 		label14.Name = "label14";
 		label14.Size = new Size(81, 18);
 		label14.TabIndex = 81;
@@ -381,7 +381,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		label15.AutoSize = true;
 		label15.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		label15.Location = new Point(571, 303);
+		label15.Location = new Point(546, 303);
 		label15.Name = "label15";
 		label15.Size = new Size(69, 18);
 		label15.TabIndex = 84;
@@ -390,7 +390,7 @@ partial class FormularioCadastrarDoutores
 		// Txt_Turnos
 		// 
 		Txt_Turnos.Font = new Font("Arial Rounded MT Bold", 12F);
-		Txt_Turnos.Location = new Point(708, 297);
+		Txt_Turnos.Location = new Point(683, 297);
 		Txt_Turnos.Name = "Txt_Turnos";
 		Txt_Turnos.Size = new Size(239, 26);
 		Txt_Turnos.TabIndex = 83;
@@ -400,7 +400,7 @@ partial class FormularioCadastrarDoutores
 		comboBox_Vencimento.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		comboBox_Vencimento.FormattingEnabled = true;
 		comboBox_Vencimento.Items.AddRange(new object[] { "Vigente", "Vencido" });
-		comboBox_Vencimento.Location = new Point(708, 159);
+		comboBox_Vencimento.Location = new Point(683, 159);
 		comboBox_Vencimento.Name = "comboBox_Vencimento";
 		comboBox_Vencimento.Size = new Size(239, 26);
 		comboBox_Vencimento.TabIndex = 85;
@@ -409,7 +409,7 @@ partial class FormularioCadastrarDoutores
 		// 
 		AutoScaleDimensions = new SizeF(7F, 15F);
 		AutoScaleMode = AutoScaleMode.Font;
-		ClientSize = new Size(992, 487);
+		ClientSize = new Size(935, 474);
 		Controls.Add(comboBox_Vencimento);
 		Controls.Add(label15);
 		Controls.Add(Txt_Turnos);
@@ -445,6 +445,8 @@ partial class FormularioCadastrarDoutores
 		Controls.Add(Btn_Atualizar);
 		Controls.Add(Btn_Pesquisar);
 		Controls.Add(Btn_Cadastrar);
+		FormBorderStyle = FormBorderStyle.FixedSingle;
+		MaximizeBox = false;
 		Name = "FormularioCadastrarDoutores";
 		StartPosition = FormStartPosition.CenterScreen;
 		Text = "FormularioCadastrarDoutores";
