@@ -3,6 +3,7 @@ using clinica.Application;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using clinica.Infrastructure.DataAccess;
 
 namespace clinica.API;
 
@@ -24,6 +25,7 @@ public class Program
 		builder.Services.AddInfrastructure(builder.Configuration);
 		builder.Services.AddInstrastructure_Application();
 
+		
 
 		builder.Services.AddAuthentication(config =>
 		{
@@ -58,6 +60,9 @@ public class Program
 
 		app.UseAuthorization();
 
+		var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+		_ = new ClinicaDbContext(connectionString!);
 
 		app.MapControllers();
 

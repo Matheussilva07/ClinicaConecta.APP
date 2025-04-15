@@ -2,13 +2,17 @@
 using clinica.Domain.Entities;
 
 namespace clinica.Infrastructure.DataAccess;
-internal class ClinicaDbContext
+public class ClinicaDbContext
 {
-	private static MongoClient GetMongoClient()
-	{
-		const string connectionString = "mongodb+srv://Matheus:Kundschafter1996@datahaven.atinz.mongodb.net/?retryWrites=true&w=majority&appName=DataHaven";
-		
-		var client = new MongoClient(connectionString);
+	private static string _connection;
+    public ClinicaDbContext(string connectionString)
+    {
+		_connection = connectionString;
+
+	}
+    public static MongoClient GetMongoClient()
+	{	
+		var client = new MongoClient(_connection);
 
 		return client;
 	}
