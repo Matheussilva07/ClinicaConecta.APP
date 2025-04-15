@@ -41,7 +41,7 @@ jobs:
           -H "Authorization: Bearer $RENDER_API_KEY" \
           -H "Content-Type: application/json" \
           -d '{
-                "service_id": "SEU_SERVICE_ID",  # Substitua com o ID do seu serviço no Render
+                "service_id": "https://clinicaconecta-app.onrender.com",  # Substitua com o ID do seu serviço no Render
                 "branch": "master",  # A branch a ser implantada
                 "action": "deploy"
               }' \
