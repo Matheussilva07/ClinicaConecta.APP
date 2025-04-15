@@ -1,0 +1,48 @@
+name: Deploy API C# to Render
+
+on:
+  push:
+    branches:
+      - master  # O GitHub Actions será acionado ao dar push na branch 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Passo 1: Fazer o checkout do código
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Passo 2: Configurar o .NET SDK para a versão que seu projeto usa
+    - name: Set up .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0'  # Coloque a versão correta que seu projeto usa
+
+    # Passo 3: Restaurar dependências do projeto
+    - name: Restore Dependencies
+      run: dotnet restore
+
+    # Passo 4: Compilar o projeto em modo Release
+    - name: Build
+      run: dotnet build --configuration Release
+
+    # Passo 5: Publicar o projeto para produção
+    - name: Publish
+      run: dotnet publish --configuration Release --output ./publish
+
+    # Passo 6: Realizar o deploy para Render
+    - name: Deploy to Render
+      env:
+        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}  # Usando o segredo para autenticação
+      run: |
+        curl -X POST \
+          -H "Authorization: Bearer $RENDER_API_KEY" \
+          -H "Content-Type: application/json" \
+          -d '{
+                "service_id": "SEU_SERVICE_ID",  # Substitua com o ID do seu serviço no Render
+                "branch": "master",  # A branch a ser implantada
+                "action": "deploy"
+              }' \
+          https://api.render.com/v1/services/SEU_SERVICE_ID/deploys
