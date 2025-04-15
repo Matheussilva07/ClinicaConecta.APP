@@ -13,7 +13,7 @@ namespace clinica.API.Controllers;
 [ApiController]
 public class DoutoresController : ControllerBase
 {
-	[HttpPost]
+	[HttpPost("register")]
 	[ProducesResponseType(typeof(ResponseRegisteredDoctorJson), StatusCodes.Status201Created)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	public async Task<IActionResult> Register([FromServices] IRegisterDoctorUseCase useCase, [FromBody] RequestRegisterDoctorJson request)
@@ -23,7 +23,7 @@ public class DoutoresController : ControllerBase
 		return Created(string.Empty, response);
 	}
 
-	[HttpGet]
+	[HttpGet("list")]
 	[ProducesResponseType(typeof(List<ResponseDoctorsJson>), StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status204NoContent)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -37,7 +37,7 @@ public class DoutoresController : ControllerBase
 	}
 
 	[HttpGet]
-	[Route("{name}")]
+	[Route("by-name-{name}")]
 	[ProducesResponseType(typeof(ResponseDoctorsJson), StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -49,7 +49,7 @@ public class DoutoresController : ControllerBase
 	}
 
 	[HttpPut]
-	[Route("{id}")]
+	[Route("update-{id}")]
 	[ProducesResponseType(StatusCodes.Status204NoContent)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -61,7 +61,7 @@ public class DoutoresController : ControllerBase
 	}
 
 	[HttpDelete]
-	[Route("{id}")]
+	[Route("delete-{id}")]
 	[ProducesResponseType(StatusCodes.Status204NoContent)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]

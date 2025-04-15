@@ -4,7 +4,7 @@ using clinica.Domain.Entities;
 namespace clinica.Infrastructure.DataAccess;
 public class ClinicaDbContext
 {
-	private static string _connection;
+	private static string? _connection;
     public ClinicaDbContext(string connectionString)
     {
 		_connection = connectionString;
