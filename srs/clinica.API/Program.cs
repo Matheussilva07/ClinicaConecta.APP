@@ -1,9 +1,8 @@
-using clinica.Infrastructure;
 using clinica.Application;
+using clinica.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using clinica.Infrastructure.DataAccess;
 
 namespace clinica.API;
 
@@ -25,8 +24,6 @@ public class Program
 		builder.Services.AddInfrastructure(builder.Configuration);
 		builder.Services.AddInstrastructure_Application();
 
-		
-
 		builder.Services.AddAuthentication(config =>
 		{
 			config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -44,7 +41,6 @@ public class Program
 			};
 		});
 
-	
 		var app = builder.Build();
 
 		// Configure the HTTP request pipeline.
@@ -59,10 +55,6 @@ public class Program
 		app.UseAuthentication();
 
 		app.UseAuthorization();
-
-		var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-		_ = new ClinicaDbContext(connectionString!);
 
 		app.MapControllers();
 

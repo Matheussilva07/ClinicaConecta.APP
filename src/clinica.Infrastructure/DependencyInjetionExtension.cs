@@ -18,15 +18,17 @@ using Microsoft.Extensions.DependencyInjection;
 namespace clinica.Infrastructure;
 public static class DependencyInjetionExtension
 {
-	public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+	internal static string ConnectionString { get; set; } = string.Empty;
+    public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
 	{
 		AddDependencyInjection_Pacientes(services);
 		AddDependencyInjection_Funcionarios(services);
 		AddDependencyInjection_Doutores(services);
 		AddDependencyInjection_Users(services);
 		AddDependencyInjection_Consultas(services);
-
 		AddTokenGenerator(services, configuration);
+
+		ConnectionString = configuration.GetConnectionString("DefaultConnection")!;
 
 	}
 	private static void AddDependencyInjection_Pacientes(IServiceCollection services)
@@ -60,7 +62,6 @@ public static class DependencyInjetionExtension
 		services.AddScoped<IWriteOnlyConsultasRepository, ConsultasRepository>();
 	
 	}
-
 	private static void AddTokenGenerator(IServiceCollection services, IConfiguration configuration)
 	{
 		string signingKey = configuration.GetValue<string>("Settings:Jwt:SigningKey")!;

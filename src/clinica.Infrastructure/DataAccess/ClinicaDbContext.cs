@@ -2,17 +2,13 @@
 using clinica.Domain.Entities;
 
 namespace clinica.Infrastructure.DataAccess;
-public class ClinicaDbContext
+internal class ClinicaDbContext
 {
-	private static string? _connection;
-    public ClinicaDbContext(string connectionString)
-    {
-		_connection = connectionString;
-
-	}
     public static MongoClient GetMongoClient()
-	{	
-		var client = new MongoClient(_connection);
+	{
+		string ConnectionString = DependencyInjetionExtension.ConnectionString;
+
+		var client = new MongoClient(ConnectionString);
 
 		return client;
 	}
